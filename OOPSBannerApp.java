@@ -1,16 +1,16 @@
 /**
- * OOPSBannerApp UC5 – Render OOPS Banner using Inline Array Initialization
- * Using String.join() inside array initialization
+ * OOPS Banner App
+ * UC6: Render OOPS banner using Static Function
  * @author Ananya
- * @version 5
+ * @version 6
  */
 
 public class OOPSBannerApp {
 
-    public static void main(String[] args) {
+    // Static function to generate banner lines
+    public static String[] getBannerLines() {
 
-        // Inline array initialization with String.join()
-        String[] lines = {
+        return new String[]{
 
             String.join(" ", " *** ", " *** ", "*****", "*****"),
             String.join(" ", "*   *", "*   *", "*   *", "*    "),
@@ -21,8 +21,12 @@ public class OOPSBannerApp {
             String.join(" ", " *** ", " *** ", "*    ", "*****")
 
         };
+    }
 
-        // Enhanced for loop to print banner
+    public static void main(String[] args) {
+
+        String[] lines = getBannerLines();
+
         for (String line : lines) {
             System.out.println(line);
         }
